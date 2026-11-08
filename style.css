@@ -1,1 +1,22 @@
-
+:root { --primary: #8b5cf6; --bg: #0f172a; --panel: #1e293b; --text: #e2e8f0; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--panel); flex-wrap: wrap; gap: 1rem; }
+header h1 { margin: 0; }
+nav button { background: none; border: 1px solid transparent; color: var(--text); padding: 0.5rem 1rem; cursor: pointer; border-radius: 6px; }
+nav button.active { background: var(--primary); color: white; }
+main { padding: 2rem; max-width: 1100px; margin: 0 auto; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.upload-area { text-align: center; padding: 3rem 1rem; border: 2px dashed #475569; border-radius: 12px; }
+.upload-btn { display: inline-block; background: var(--primary); color: white; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; margin-top: 1rem; font-weight: bold; }
+#video-input { display: none; }
+.hidden { display: none !important; }
+.progress-bar-container { width: 100%; height: 20px; background: #334155; border-radius: 10px; margin-top: 1rem; overflow: hidden; }
+.progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s; }
+.clips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.clip-card { background: var(--panel); border-radius: 8px; padding: 1rem; }
+.clip-card img { width: 100%; border-radius: 4px; }
+.clip-card h3 { margin: 0.5rem 0; font-size: 1rem; }
+.clip-card .meta { color: #94a3b8; font-size: 0.9rem; }
+.hint { color: #94a3b8; }
