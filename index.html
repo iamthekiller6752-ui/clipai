@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIPAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>CLIPAI</h1>
+  <nav>
+    <button class="tab-btn active" data-tab="clipper">Нарезка</button>
+    <button class="tab-btn" data-tab="streams">Поиск стримов</button>
+    <button class="tab-btn" data-tab="my-clips">Мои клипы</button>
+  </nav>
+</header>
+<main>
+  <section id="clipper" class="tab-content active">
+    <div class="upload-area" id="upload-area">
+      <h2>Загрузите видео</h2>
+      <p>AI найдёт лучшие моменты автоматически</p>
+      <input type="file" id="video-input" accept="video/*">
+      <label for="video-input" class="upload-btn">Загрузить видео</label>
+    </div>
+    <div class="processing-area hidden" id="processing-area">
+      <p id="status-text">Обработка...</p>
+      <div class="progress-bar-container"><div class="progress-bar" id="progress-bar"></div></div>
+    </div>
+  </section>
 
+  <section id="streams" class="tab-content">
+    <h2>Поиск свежих стримов</h2>
+    <p class="hint">Функция будет доступна после настройки ключей Twitch/YouTube (следующий этап).</p>
+  </section>
+
+  <section id="my-clips" class="tab-content">
+    <h2>Мои клипы</h2>
+    <div id="clips-grid" class="clips-grid"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
